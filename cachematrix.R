@@ -26,11 +26,11 @@ makeCacheMatrix <- function(y = matrix()) {  #Creates our special matrix from ze
 
 cacheSolve <- function(a, ...) {
                                       ## Return a matrix that is the inverse of 'x'
-  m <- vector$back()
-  if(!is.null(m)) {
+  m <- vector$back()                  ## the variable "a" can be either the especial vector before, 
+  if(!is.null(m)) {                   ## or a matrix 
     message("Getting cached data")
     return(m)
   }
-  vector<-makeCacheMatrix(a)
+  vector<-makeCacheMatrix(a)          ## The else part of the "if"
   vector$back()
 }
